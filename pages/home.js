@@ -35,14 +35,7 @@ style={{
 />
     );
 }
-const Bar=({... props}) =>(
-  <View style={{backgroundColor:'#FFFFFF'}}
 
-  {...props}
-  >
-      </View>
-
-    );
 const Done=({... props}) =>(
     <TouchableOpacity style={styles.getStartBtn}
  
@@ -91,7 +84,10 @@ export default class FirstPage extends React.Component {
 DoneButtonComponent={Done}
 NextButtonComponent={Next}
 SkipButtonComponent={Skip}
-bottomBarColor={Bar}
+bottomBarColor={'white'}
+bottomBarHeight ={55}
+// showSkip ={false}
+skipToPage={0}
 DotComponent={Dots}
 onDone={()=> this.props.navigation.navigate("main")}
 onSkip={()=> this.props.navigation.navigate("main")}
@@ -124,9 +120,7 @@ onSkip={()=> this.props.navigation.navigate("main")}
   }
 }
 const styles = StyleSheet.create({
-  ScrollView:{
 
-  },
   getStartBtn: {
     width: 100,
     height: 44,
@@ -134,7 +128,7 @@ const styles = StyleSheet.create({
     borderRadius: 22,
     justifyContent: 'center',
     alignItems: 'center',
-    color:'#FFFFFF'
+    // color:'#FFFFFF'
   },
   buttonCircle: {
     margin:10,
