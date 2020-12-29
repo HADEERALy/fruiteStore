@@ -94,6 +94,8 @@ SkipButtonComponent={Skip}
 bottomBarColor={Bar}
 DotComponent={Dots}
 onDone={()=> this.props.navigation.navigate("main")}
+onSkip={()=> this.props.navigation.navigate("main")}
+
   pages={[
 
     {
